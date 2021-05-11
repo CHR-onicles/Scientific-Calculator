@@ -44,6 +44,7 @@ class MainWindow(QWidget):
         self.top_layout.setContentsMargins(0, 0, 0, 0)
         self.bottom_layout = QGridLayout()
         self.bottom_layout.setContentsMargins(0, 0, 0, 0)
+        self.bottom_layout.setSpacing(3)
 
         # <TOP LAYOUT>
         self.top_layout.addWidget(self.calc_screen)

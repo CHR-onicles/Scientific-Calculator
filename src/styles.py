@@ -5,7 +5,7 @@ def main_window_style():
        color: white;
     }
     QWidget#mainwindow {
-        background-color: #555;
+        background-color: #515151;
     }
     
     QLineEdit#calc-screen {
@@ -26,7 +26,8 @@ def main_window_style():
     }
     
     QPushButton:hover, QPushButton#num-btn:hover {
-        background-color: #666;
+        background-color: #505050;
+        border: 6px solid silver;  /* have to up the pixels cuz the margin eats into it */
     }
     
     QPushButton#equal-to-btn {
