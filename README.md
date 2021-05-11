@@ -5,7 +5,7 @@ UI overhaul of Scientific calculator done by [Patrick Attankurugu](https://githu
 
 ## Screenshot
 *Still in progress*
-![screenshots/progress-1.png]
+<img src='screenshots/progress-1.png'>
 
 
 
