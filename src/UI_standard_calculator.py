@@ -43,7 +43,7 @@ class MainWindow(QWidget):
         self.top_layout = QVBoxLayout()
         self.top_layout.setContentsMargins(0, 0, 0, 0)
         self.bottom_layout = QGridLayout()
-        self.bottom_layout.setContentsMargins(0, 0, 0, -1)
+        self.bottom_layout.setContentsMargins(0, 0, 0, 0)
 
         # <TOP LAYOUT>
         self.top_layout.addWidget(self.calc_screen)
@@ -60,9 +60,13 @@ class MainWindow(QWidget):
             if i % 4 == 0:
                 row += 1
                 col = 1
-            self.bottom_layout.addWidget(self.all_btns[i], row, col)
-            col += 1
 
+            self.bottom_layout.addWidget(self.all_btns[i], row, col)
+            if row in [3, 4, 5, 6] and col in [1, 2, 3]:
+                self.all_btns[i].setObjectName('num-btn')
+
+            col += 1
+        self.all_btns[-1].setObjectName('equal-to-btn')
         # </BOTTOM LAYOUT>
 
         self.main_layout.addLayout(self.top_layout, 30)
