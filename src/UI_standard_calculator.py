@@ -35,13 +35,15 @@ class MainWindow(QWidget):
             new_btn = QPushButton()
             self.all_btns.append(new_btn)
         # </BOTTOM WIDGETS>
-        print(len(self.all_btns), self.all_btns)
+        # print(len(self.all_btns), self.all_btns)
 
 
     def layouts(self):
         self.main_layout = QVBoxLayout()
         self.top_layout = QVBoxLayout()
+        self.top_layout.setContentsMargins(0, 0, 0, 0)
         self.bottom_layout = QGridLayout()
+        self.bottom_layout.setContentsMargins(0, 0, 0, -1)
 
         # <TOP LAYOUT>
         self.top_layout.addWidget(self.calc_screen)
@@ -64,6 +66,7 @@ class MainWindow(QWidget):
         # </BOTTOM LAYOUT>
 
         self.main_layout.addLayout(self.top_layout, 30)
+
         self.main_layout.addLayout(self.bottom_layout, 70)
         self.setLayout(self.main_layout)
 
