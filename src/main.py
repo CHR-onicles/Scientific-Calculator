@@ -10,7 +10,7 @@ from UI_standard_calculator import MainWindow
 
 
 
-class MainApp(MainWindow):
+class MainApp(MainWindow, QMainWindow):
 
     def __init__(self):
         super(MainApp, self).__init__()
