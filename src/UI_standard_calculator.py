@@ -30,8 +30,12 @@ class MainWindow(QWidget):
 
 
         # <BOTTOM WIDGETS>
-
+        self.all_btns = list()
+        for col in range(24):
+            new_btn = QPushButton()
+            self.all_btns.append(new_btn)
         # </BOTTOM WIDGETS>
+        print(len(self.all_btns), self.all_btns)
 
 
     def layouts(self):
@@ -47,6 +51,15 @@ class MainWindow(QWidget):
 
 
         # <BOTTOM LAYOUT>
+        # lel remove this spaghetti thingy later - brain was tired
+        row = 1
+        col = 1
+        for i in range(24):
+            if i % 4 == 0:
+                row += 1
+                col = 1
+            self.bottom_layout.addWidget(self.all_btns[i], row, col)
+            col += 1
 
         # </BOTTOM LAYOUT>
 
