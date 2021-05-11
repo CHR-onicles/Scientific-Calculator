@@ -3,7 +3,7 @@ from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 
 
-import icons_rc
+import icons_rc, styles
 
 
 
@@ -14,6 +14,8 @@ class MainWindow(QWidget):
         self.setWindowTitle('Standard Calculator')
         self.setWindowIcon(QIcon(':/icons/calc-icon'))
         self.setFixedSize(500, 700)
+        self.setObjectName('mainwindow')
+        self.setStyleSheet(styles.main_window_style())
 
         self.widgets()
         self.layouts()
