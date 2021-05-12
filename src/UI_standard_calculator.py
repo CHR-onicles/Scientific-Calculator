@@ -22,7 +22,7 @@ class MainWindow(QWidget):
                               '7', '8', '9', '×',
                               '4', '5', '6', '-',
                               '1', '2', '3', '+',
-                              '+/_', '0', '.', '=',
+                              '+/_', '0', '.', '',
                               )
 
         self.widgets()
@@ -40,16 +40,14 @@ class MainWindow(QWidget):
         # <BOTTOM WIDGETS>
         self.all_btns = list()
         for i in range(24):
-            if i == 3:
-                tool_btn = QToolButton()
-                self.all_btns.append(tool_btn)
-                continue
             new_btn = QPushButton()
             self.all_btns.append(new_btn)
 
         self.all_btns[-1].setObjectName('equal-to-btn')
+        self.all_btns[-1].setIcon(QIcon(':/icons/equal-to'))
         self.all_btns[3].setIcon(QIcon(':/icons/backspace'))
         self.all_btns[3].setIconSize(QSize(23, 23))
+        self.all_btns[-1].setIconSize(QSize(20, 23))
 
         # </BOTTOM WIDGETS>
         # print(len(self.all_btns), self.all_btns)
@@ -80,7 +78,7 @@ class MainWindow(QWidget):
                 col = 1
 
             self.bottom_layout.addWidget(self.all_btns[i], row, col)
-            if row in [3, 4, 5, 6] and col in [1, 2, 3]:
+            if row in [4,5,6,7] and col in [1, 2, 3]:  # fixme: rows supposed to be 3,4,5,6 but idk something wrong...
                 self.all_btns[i].setObjectName('num-btn')
 
             self.all_btns[i].setText(self.all_btns_text[i])
@@ -89,7 +87,6 @@ class MainWindow(QWidget):
             col += 1
 
 
-        self.bottom_layout.addWidget(self.all_btns[3], 1, 4)
         # </BOTTOM LAYOUT>
 
         self.main_layout.addLayout(self.top_layout, 30)

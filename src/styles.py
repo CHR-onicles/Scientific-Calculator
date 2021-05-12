@@ -5,7 +5,7 @@ def main_window_style():
        color: white;
     }
     QWidget#mainwindow {
-        background-color: #515151;
+        background-color: #353535;
     }
     
     QLineEdit#calc-screen {
@@ -20,34 +20,22 @@ def main_window_style():
     QPushButton {
         font-weight: normal;
         min-width:64px;        
-        min-height: 68px;
+        min-height: 70px;
         margin: -5px;
-        background-color: #2b2b2b;
+        background-color: #202020;
     }
-    
-    QToolButton {
-        min-width: 91px;        
-        min-height: 57px;
-        background-color: #2b2b2b;
-        border: 1px solid #2b2b2b;
-    }
-    
-    QToolButton:hover {
-        background-color: #505050;
-        border: 1px solid silver;
-    }
-    
+        
     QPushButton:hover, QPushButton#num-btn:hover{
         background-color: #505050;
         border: 6px solid silver;  /* have to up the pixels cuz the margin eats into it */
     }
     
     QPushButton#equal-to-btn {
-        background-color: #777;
+        background-color: #505050;
     }
     
     QPushButton#equal-to-btn:hover {
-        background-color: #999;
+        background-color: #818181;
     }
     
     QPushButton#num-btn {

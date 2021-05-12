@@ -2,6 +2,7 @@
   <qresource prefix="icons">
     <file alias="calc-icon">images/calc_icon.ico</file>
     <file alias="backspace">images/backspacew.png</file>
+    <file alias="equal-to">images/equal-signw.png</file>
 
   </qresource>
 </RCC>
