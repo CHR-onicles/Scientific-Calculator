@@ -33,6 +33,7 @@ class MainWindow(QWidget):
         # <TOP WIDGETS>
         self.calc_screen = QLineEdit()
         self.calc_screen.setObjectName('calc-screen')
+        self.calc_screen.setAlignment(Qt.AlignRight)
 
         # </TOP WIDGETS>
 

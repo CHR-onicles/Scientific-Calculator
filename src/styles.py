@@ -14,7 +14,8 @@ def main_window_style():
         background-color: transparent;
         font-weight: bold;
         padding-bottom: 10px;
-        padding-top: 10px;        
+        padding-top: 10px;
+        selection-background-color: #666;        
     }
     
     QPushButton {
