@@ -21,7 +21,7 @@ class MainWindow(QWidget):
                               '1/x', 'x^2', '2sqrt', '',
                               '7', '8', '9', '',
                               '4', '5', '6', '',
-                              '1', '2', '3', '+',
+                              '1', '2', '3', '',
                               '+/_', '0', '.', '',
                               )
 
@@ -50,7 +50,10 @@ class MainWindow(QWidget):
         self.all_btns[11].setIcon(QIcon(':/icons/multiplication'))
         self.all_btns[15].setIcon(QIcon(':/icons/subtraction'))
         self.all_btns[7].setIcon(QIcon(':/icons/division'))
+        self.all_btns[7].setIcon(QIcon(':/icons/division'))
+        self.all_btns[19].setIcon(QIcon(':/icons/addition'))
 
+        self.all_btns[19].setIconSize(QSize(23, 23))
         self.all_btns[7].setIconSize(QSize(20, 20))
         self.all_btns[11].setIconSize(QSize(15, 15))
         self.all_btns[15].setIconSize(QSize(20, 20))

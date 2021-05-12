@@ -6,6 +6,7 @@
     <file alias="multiplication">images/multiplication-signw.png</file>
     <file alias="subtraction">images/minus-signw.png</file>
     <file alias="division">images/division-signw.png</file>
+    <file alias="addition">images/addition-signw.png</file>
 
   </qresource>
 </RCC>
