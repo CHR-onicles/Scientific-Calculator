@@ -78,9 +78,6 @@ class MainWindow(QWidget):
             if i % 4 == 0:
                 row += 1
                 col = 1
-            # if i == 24:
-            #     break
-
 
             self.bottom_layout.addWidget(self.all_btns[i], row, col)
             if row in [3, 4, 5, 6] and col in [1, 2, 3]:

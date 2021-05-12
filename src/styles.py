@@ -18,7 +18,7 @@ def main_window_style():
     }
     
     QPushButton {
-        font-weight: bold;
+        font-weight: normal;
         min-width:64px;        
         min-height: 68px;
         margin: -5px;
@@ -53,6 +53,5 @@ def main_window_style():
     QPushButton#num-btn {
         background-color: #111;
     }
-    
     
     """
