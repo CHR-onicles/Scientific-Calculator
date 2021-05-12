@@ -40,12 +40,17 @@ class MainWindow(QWidget):
         # <BOTTOM WIDGETS>
         self.all_btns = list()
         for i in range(24):
-            if i == 4:
+            if i == 3:
                 tool_btn = QToolButton()
                 self.all_btns.append(tool_btn)
                 continue
             new_btn = QPushButton()
             self.all_btns.append(new_btn)
+
+        self.all_btns[-1].setObjectName('equal-to-btn')
+        self.all_btns[3].setIcon(QIcon(':/icons/backspace'))
+        self.all_btns[3].setIconSize(QSize(23, 23))
+
         # </BOTTOM WIDGETS>
         # print(len(self.all_btns), self.all_btns)
 
@@ -86,8 +91,7 @@ class MainWindow(QWidget):
 
             col += 1
 
-        self.all_btns[-1].setObjectName('equal-to-btn')
-        self.all_btns[3].setIcon(QIcon(':/icons/backspace'))
+
         self.bottom_layout.addWidget(self.all_btns[3], 1, 4)
         # </BOTTOM LAYOUT>
 

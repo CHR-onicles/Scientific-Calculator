@@ -17,15 +17,27 @@ def main_window_style():
         padding-top: 10px;        
     }
     
-    QPushButton, QToolButton {
+    QPushButton {
         font-weight: bold;
-        min-width:75px;        
-        min-height: 70px;
+        min-width:64px;        
+        min-height: 68px;
         margin: -5px;
         background-color: #2b2b2b;
     }
     
-    QPushButton:hover, QPushButton#num-btn:hover, QToolButton:hover {
+    QToolButton {
+        min-width: 91px;        
+        min-height: 57px;
+        background-color: #2b2b2b;
+        border: 1px solid #2b2b2b;
+    }
+    
+    QToolButton:hover {
+        background-color: #505050;
+        border: 1px solid silver;
+    }
+    
+    QPushButton:hover, QPushButton#num-btn:hover{
         background-color: #505050;
         border: 6px solid silver;  /* have to up the pixels cuz the margin eats into it */
     }
