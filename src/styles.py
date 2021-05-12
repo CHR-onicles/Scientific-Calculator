@@ -10,6 +10,7 @@ def main_window_style():
     
     QLineEdit#calc-screen {
         border: 1px solid silver; /* will remove later */
+        border-radius: 3px;
         font-size: 30pt;
         background-color: transparent;
         font-weight: bold;
