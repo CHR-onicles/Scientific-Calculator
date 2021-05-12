@@ -17,6 +17,14 @@ class MainWindow(QWidget):
         self.setObjectName('mainwindow')
         self.setStyleSheet(styles.main_window_style())
 
+        self.all_btns_text = ('%', 'CE', 'C', 'Bkspc',
+                              '1/x', 'x^2', '2sqrt', '÷',
+                              '7', '8', '9', '×',
+                              '4', '5', '6', '-',
+                              '1', '2', '3', '+',
+                              '+/_', '0', '.', '=',
+                              )
+
         self.widgets()
         self.layouts()
 
@@ -61,17 +69,16 @@ class MainWindow(QWidget):
             if i % 4 == 0:
                 row += 1
                 col = 1
-
             self.bottom_layout.addWidget(self.all_btns[i], row, col)
             if row in [3, 4, 5, 6] and col in [1, 2, 3]:
                 self.all_btns[i].setObjectName('num-btn')
+            self.all_btns[i].setText(self.all_btns_text[i])
 
             col += 1
         self.all_btns[-1].setObjectName('equal-to-btn')
         # </BOTTOM LAYOUT>
 
         self.main_layout.addLayout(self.top_layout, 30)
-
         self.main_layout.addLayout(self.bottom_layout, 70)
         self.setLayout(self.main_layout)
 
