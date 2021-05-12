@@ -1,6 +1,7 @@
 # SCIENTIFIC CALCULATOR
 
-UI overhaul of Scientific calculator done by [Patrick Attankurugu](https://github.com/PatrickAttankurugu/Scientific-Calculator)
+UI overhaul of Scientific calculator previously done by [Patrick Attankurugu](https://github.com/PatrickAttankurugu/Scientific-Calculator)
+using PyQt5.
 
 
 ## Screenshot

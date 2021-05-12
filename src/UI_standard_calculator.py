@@ -18,7 +18,7 @@ class MainWindow(QWidget):
         self.setStyleSheet(styles.main_window_style())
 
         self.all_btns_text = ('%', 'CE', 'C', '',
-                              '1/x', '', '', '',
+                              '', '', '', '',
                               '7', '8', '9', '',
                               '4', '5', '6', '',
                               '1', '2', '3', '',
@@ -53,7 +53,9 @@ class MainWindow(QWidget):
         self.all_btns[19].setIcon(QIcon(':/icons/addition'))
         self.all_btns[6].setIcon(QIcon(':/icons/square-root'))
         self.all_btns[5].setIcon(QIcon(':/icons/squared2'))
+        self.all_btns[4].setIcon(QIcon(':/icons/inverse'))
 
+        self.all_btns[4].setIconSize(QSize(25, 25))
         self.all_btns[5].setIconSize(QSize(25, 25))
         self.all_btns[6].setIconSize(QSize(23, 23))
         self.all_btns[19].setIconSize(QSize(23, 23))
