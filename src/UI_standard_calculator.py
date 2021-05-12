@@ -18,9 +18,9 @@ class MainWindow(QWidget):
         self.setStyleSheet(styles.main_window_style())
 
         self.all_btns_text = ('%', 'CE', 'C', '',
-                              '1/x', 'x^2', '2sqrt', '÷',
-                              '7', '8', '9', '×',
-                              '4', '5', '6', '-',
+                              '1/x', 'x^2', '2sqrt', '',
+                              '7', '8', '9', '',
+                              '4', '5', '6', '',
                               '1', '2', '3', '+',
                               '+/_', '0', '.', '',
                               )
@@ -47,6 +47,13 @@ class MainWindow(QWidget):
         self.all_btns[-1].setObjectName('equal-to-btn')
         self.all_btns[-1].setIcon(QIcon(':/icons/equal-to'))
         self.all_btns[3].setIcon(QIcon(':/icons/backspace'))
+        self.all_btns[11].setIcon(QIcon(':/icons/multiplication'))
+        self.all_btns[15].setIcon(QIcon(':/icons/subtraction'))
+        self.all_btns[7].setIcon(QIcon(':/icons/division'))
+
+        self.all_btns[7].setIconSize(QSize(20, 20))
+        self.all_btns[11].setIconSize(QSize(15, 15))
+        self.all_btns[15].setIconSize(QSize(20, 20))
         self.all_btns[3].setIconSize(QSize(23, 23))
         self.all_btns[-1].setIconSize(QSize(20, 23))
 

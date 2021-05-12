@@ -3,6 +3,9 @@
     <file alias="calc-icon">images/calc_icon.ico</file>
     <file alias="backspace">images/backspacew.png</file>
     <file alias="equal-to">images/equal-signw.png</file>
+    <file alias="multiplication">images/multiplication-signw.png</file>
+    <file alias="subtraction">images/minus-signw.png</file>
+    <file alias="division">images/division-signw.png</file>
 
   </qresource>
 </RCC>
