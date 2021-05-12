@@ -17,7 +17,7 @@ class MainWindow(QWidget):
         self.setObjectName('mainwindow')
         self.setStyleSheet(styles.main_window_style())
 
-        self.all_btns_text = ('%', 'CE', 'C', 'Bkspc',
+        self.all_btns_text = ('%', 'CE', 'C', '',
                               '1/x', 'x^2', '2sqrt', '÷',
                               '7', '8', '9', '×',
                               '4', '5', '6', '-',
@@ -39,7 +39,11 @@ class MainWindow(QWidget):
 
         # <BOTTOM WIDGETS>
         self.all_btns = list()
-        for col in range(24):
+        for i in range(24):
+            if i == 4:
+                tool_btn = QToolButton()
+                self.all_btns.append(tool_btn)
+                continue
             new_btn = QPushButton()
             self.all_btns.append(new_btn)
         # </BOTTOM WIDGETS>
@@ -62,20 +66,29 @@ class MainWindow(QWidget):
 
 
         # <BOTTOM LAYOUT>
-        # lel remove this spaghetti thingy later - brain was tired
+        # remove this spaghetti thingy later - brain was tired
         row = 1
         col = 1
         for i in range(24):
             if i % 4 == 0:
                 row += 1
                 col = 1
+            # if i == 24:
+            #     break
+
+
             self.bottom_layout.addWidget(self.all_btns[i], row, col)
             if row in [3, 4, 5, 6] and col in [1, 2, 3]:
                 self.all_btns[i].setObjectName('num-btn')
+
             self.all_btns[i].setText(self.all_btns_text[i])
+            # print(self.all_btns[i], self.all_btns_text[i])
 
             col += 1
+
         self.all_btns[-1].setObjectName('equal-to-btn')
+        self.all_btns[3].setIcon(QIcon(':/icons/backspace'))
+        self.bottom_layout.addWidget(self.all_btns[3], 1, 4)
         # </BOTTOM LAYOUT>
 
         self.main_layout.addLayout(self.top_layout, 30)

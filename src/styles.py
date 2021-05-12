@@ -17,7 +17,7 @@ def main_window_style():
         padding-top: 10px;        
     }
     
-    QPushButton {
+    QPushButton, QToolButton {
         font-weight: bold;
         min-width:75px;        
         min-height: 70px;
@@ -25,7 +25,7 @@ def main_window_style():
         background-color: #2b2b2b;
     }
     
-    QPushButton:hover, QPushButton#num-btn:hover {
+    QPushButton:hover, QPushButton#num-btn:hover, QToolButton:hover {
         background-color: #505050;
         border: 6px solid silver;  /* have to up the pixels cuz the margin eats into it */
     }
