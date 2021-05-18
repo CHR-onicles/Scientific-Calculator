@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import *
 
 
 import icons_rc, styles
+from custom_widgets import *
 
 
 
@@ -41,7 +42,7 @@ class MainWindow(QWidget):
         # <BOTTOM WIDGETS>
         self.all_btns = list()
         for i in range(24):
-            new_btn = QPushButton()
+            new_btn = PushButton()
             self.all_btns.append(new_btn)
 
         self.all_btns[-1].setObjectName('equal-to-btn')
