@@ -18,31 +18,5 @@ def main_window_style():
         padding-top: 10px;
         selection-background-color: #666;        
     }
-    
-    /*QPushButton {
-        font-weight: normal;
-        min-width:64px;        
-        min-height: 70px;
-        margin: -5px;
-        background-color: #202020;
-    }*/
         
-    /*QPushButton:hover, QPushButton#num-btn:hover{
-        background-color: #505050;
-       /* border: 6px solid silver; */  /* have to up the pixels cuz the margin eats into it */
-    }*/
-    
-    /*QPushButton#equal-to-btn {
-        background-color: #505050;
-    }
-    
-    QPushButton#equal-to-btn:hover {
-        background-color: #818181;
-    }
-    
-    QPushButton#num-btn {
-        background-color: #111;
-    }
-    */
-    
     """
