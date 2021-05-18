@@ -20,7 +20,7 @@ class PushButton(QPushButton):
             startValue=QColor(self.PRESS_COLOR),
             endValue=QColor(self.HOVER_COLOR),
             valueChanged=self._on_value_changed,
-            duration=200,
+            duration=150,
         )
 
         self._update_stylesheet(QColor(self.BASE_COLOR))  # passing in default background color
