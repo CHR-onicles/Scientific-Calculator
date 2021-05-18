@@ -29,7 +29,7 @@ def main_window_style():
         
     QPushButton:hover, QPushButton#num-btn:hover{
         background-color: #505050;
-        border: 6px solid silver;  /* have to up the pixels cuz the margin eats into it */
+       /* border: 6px solid silver; */  /* have to up the pixels cuz the margin eats into it */
     }
     
     QPushButton#equal-to-btn {
