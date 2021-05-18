@@ -42,6 +42,14 @@ class MainWindow(QWidget):
         # <BOTTOM WIDGETS>
         self.all_btns = list()
         for i in range(24):
+            if i in [8,9,10,12,13,14,16,17,18,20,21,22]:
+                num_btns = PushButton(basecolor='#111')
+                self.all_btns.append(num_btns)
+                continue
+            if i == 23:
+                equal_to_btn = PushButton(basecolor='#505050', hovercolor='#818181', presscolor='#858585')
+                self.all_btns.append(equal_to_btn)
+                continue
             new_btn = PushButton()
             self.all_btns.append(new_btn)
 
@@ -80,9 +88,7 @@ class MainWindow(QWidget):
 
         # <TOP LAYOUT>
         self.top_layout.addWidget(self.calc_screen)
-
         # </TOP LAYOUT>
-
 
 
         # <BOTTOM LAYOUT>
@@ -95,14 +101,10 @@ class MainWindow(QWidget):
                 col = 1
 
             self.bottom_layout.addWidget(self.all_btns[i], row, col)
-            if row in [4,5,6,7] and col in [1, 2, 3]:  # fixme: rows supposed to be 3,4,5,6 but idk something wrong...
-                self.all_btns[i].setObjectName('num-btn')
-
             self.all_btns[i].setText(self.all_btns_text[i])
             # print(self.all_btns[i], self.all_btns_text[i])
 
             col += 1
-
 
         # </BOTTOM LAYOUT>
 
