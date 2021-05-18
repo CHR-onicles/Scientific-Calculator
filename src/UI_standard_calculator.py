@@ -47,7 +47,7 @@ class MainWindow(QWidget):
                 self.all_btns.append(num_btns)
                 continue
             if i == 23:
-                equal_to_btn = PushButton(basecolor='#505050', hovercolor='#818181', presscolor='#858585')
+                equal_to_btn = PushButton(basecolor='#505050', hovercolor='#818181', presscolor='#8f8f8f')
                 self.all_btns.append(equal_to_btn)
                 continue
             new_btn = PushButton()

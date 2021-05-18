@@ -14,14 +14,14 @@ class PushButton(QPushButton):
     def __init__(self, basecolor=BASE_COLOR, hovercolor=HOVER_COLOR, presscolor=PRESS_COLOR):
         super(PushButton, self).__init__()
         self._animation1 = QVariantAnimation(
-            startValue=QColor(self.HOVER_COLOR),
+            startValue=QColor(hovercolor),
             endValue=QColor(basecolor),
             valueChanged=self._on_value_changed,
             duration=400,
         )
         self._animation2 = QVariantAnimation(
-            startValue=QColor(self.PRESS_COLOR),
-            endValue=QColor(self.HOVER_COLOR),
+            startValue=QColor(presscolor),
+            endValue=QColor(hovercolor),
             valueChanged=self._on_value_changed,
             duration=150,
         )
