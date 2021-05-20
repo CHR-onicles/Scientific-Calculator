@@ -26,10 +26,10 @@ class MainWindow(QWidget):
                               '+/_', '0', '.', '',
                               )
 
-        self.widgets()
-        self.layouts()
+        self.ui_widgets()
+        self.ui_layouts()
 
-    def widgets(self):
+    def ui_widgets(self):
 
         # <TOP WIDGETS>
         self.calc_screen = NoCursorLineEdit()
@@ -78,7 +78,7 @@ class MainWindow(QWidget):
         # print(len(self.all_btns), self.all_btns)
 
 
-    def layouts(self):
+    def ui_layouts(self):
         self.main_layout = QVBoxLayout()
         self.top_layout = QVBoxLayout()
         self.top_layout.setContentsMargins(0, 0, 0, 0)
