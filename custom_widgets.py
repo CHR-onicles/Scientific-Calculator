@@ -65,3 +65,16 @@ class PushButton(QPushButton):
 
 
 
+class NoCursorLineEdit(QLineEdit):
+
+    def __init__(self):
+        super(NoCursorLineEdit, self).__init__()
+        self.setReadOnly(True)
+
+    def keyPressEvent(self, event):
+        self.setReadOnly(False)
+        super(NoCursorLineEdit, self).keyPressEvent(event)
+        self.setReadOnly(True)
+
+
+

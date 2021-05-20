@@ -32,7 +32,7 @@ class MainWindow(QWidget):
     def widgets(self):
 
         # <TOP WIDGETS>
-        self.calc_screen = QLineEdit()
+        self.calc_screen = NoCursorLineEdit()
         self.calc_screen.setObjectName('calc-screen')
         self.calc_screen.setAlignment(Qt.AlignRight)
 
