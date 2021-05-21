@@ -8,10 +8,10 @@ from custom_widgets import *
 
 
 
-class MainWindow(QWidget):
+class UiMainWindow(QWidget):
 
     def __init__(self):
-        super(MainWindow, self).__init__()
+        super(UiMainWindow, self).__init__()
         self.setWindowTitle('Calculator - Standard')
         self.setWindowIcon(QIcon(':/icons/calc-icon'))
         self.setFixedSize(450, 660)
