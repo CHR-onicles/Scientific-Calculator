@@ -22,21 +22,14 @@ class MainApp(UiMainWindow, QMainWindow):
         # <NUMBER BUTTONS>
         # print(self.all_btns.index('0'))
         for x in self.all_btns:
-            x.clicked.connect(lambda: self.on_num_btn_click(x))
-            print(x.text())
-            # break
+            x.clicked.connect(lambda checked, btn=x: self.on_num_btn_click(btn))  # 'checked' is the default parameter that passes the clicked signal
 
         # </NUMBER BUTTONS>
         pass
 
     def on_num_btn_click(self, btn):
-        # is_btn_found = False
-        print(btn.text())
-
         if btn.text() in ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']:
             self.calc_screen.setText(self.calc_screen.text() + btn.text())
-            # is_btn_found = True
-            # break
 
 
 
