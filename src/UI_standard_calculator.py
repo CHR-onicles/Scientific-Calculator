@@ -42,7 +42,7 @@ class UiMainWindow(QWidget):
         # <BOTTOM WIDGETS>
         self.all_btns = list()
         for i in range(24):
-            if i in [8,9,10,12,13,14,16,17,18,20,21,22]:
+            if i in [8, 9, 10, 12, 13, 14, 16, 17, 18, 20, 21, 22]:
                 num_btns = PushButton(basecolor='#111')
                 self.all_btns.append(num_btns)
                 continue
