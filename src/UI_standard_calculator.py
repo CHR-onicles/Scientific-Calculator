@@ -14,7 +14,7 @@ class UiMainWindow(QWidget):
         super(UiMainWindow, self).__init__()
         self.setWindowTitle('Calculator - Standard')
         self.setWindowIcon(QIcon(':/icons/calc-icon'))
-        self.setFixedSize(450, 660)
+        self.setFixedSize(430, 620)
         self.setObjectName('mainwindow')
         self.setStyleSheet(styles.main_window_style())
 
